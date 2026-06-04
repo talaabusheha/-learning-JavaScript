@@ -624,7 +624,63 @@ let name="Tala"
 /////////////////////////////////////////////////////////
 ///////////////////////////////////////////////
 //Dom in JS
-// DOM => Document Object Model 
+// DOM => Document Object Model  
+// Edite Style & att 
+// document.getElementById("title").innerHTML="TALA" //=> تغير النص
+// "<input value='gerger'/>"
+// let content =document.getElementById("title").innerHTML // => قراءة للنص 
+// console.log(content)
+// document.getElementsByTagName("input")[0].setAttribute("value",content)
+// function changeTitle2(){
+//   document.getElementById("title2").innerHTML="Tarrrr"
+
+// }
+///////////////////////////////////////////////// 
+// Event Listener 
+// document.getElementById("title").addEventListener("click",()=>{
+//      document.getElementById("title2").innerHTML="Tarrrr"
+
+// })
+////////////////////////////////////////////////////////////////
+//Edit & delete element 
+// document.getElementById("ul").innerHTML+=`<li>Rafat</li>`
+// let liElement=document.createElement("li")
+// let textContent=document.createTextNode("Rafat")
+// liElement.appendChild(textContent)
+// document.getElementById("ul").appendChild(liElement)
+// document.getElementById("ul").innerHTML+=`<li>Rafat</li>`
+
+//  document.getElementById("ul").removeChild(liElement)
+//////////////////////////////////////////////////////////
+//Chanelge DOM in JS
+// let inp=document.getElementById("in1")
+// let sub=document.getElementById("sub")
+// sub.addEventListener("click",()=>{
+// const val=document.getElementById("in1").value
+// let textNode=document.createTextNode(val)
+// document.getElementById("title").appendChild(textNode) 
+// let brelement=document.createElement("br")
+// document.getElementById("title").appendChild(brelement)
+
+
+// })
+// function nameInputChange(input){
+//    document.getElementById("currentName").innerHTML=input.value
+// }
+// document.getElementById("title").addEventListener("mouseover",function(){
+   
+
+// })
+// document.getElementById("title").addEventListener("mouseout",function(){
+// this.style.background='white'
+// })
+///////////////////////////////////////////////////////
+ //  استخدام مكتبات ال جافا سكريبت 
+
+
+ 
+
+
 
 
 
