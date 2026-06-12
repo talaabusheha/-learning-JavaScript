@@ -20,7 +20,4 @@ try{
     alert ("Error: "+e)
 }finally{
     console.log("hello")
-}
-    
-    
-})
+}})

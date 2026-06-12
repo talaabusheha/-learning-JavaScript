@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="title1" style="visibility:hidden;">Title 1</h3>
+    <h3 id="title2" style="visibility:hidden;">Title 2</h3>
+    <h3 id="title3" style="visibility:hidden;">Title 3</h3>
+    <h3 id="title4" style="visibility:hidden;">Title 4</h3>
+    
+</body>
+<script>
+     ///هادا الاشي اسمو جحيم الكول باك 
+    // setTimeout(()=>{
+    //     document.getElementById("title1").style.visibility= "visible"     
+    //     setTimeout(()=>{
+    //     document.getElementById("title2").style.visibility= "visible"       
+    //     setTimeout(()=>{
+    //     document.getElementById("title3").style.visibility= "visible"    
+    //     setTimeout(()=>{
+    //     document.getElementById("title4").style.visibility= "visible"       
+    // },1000)   
+    // },1000)
+    // },1000)  
+    // },1000)
+
+    //promises
+    // let p = new Promise(function(resolve,reject){
+    //     // هان بكتب كود م بدي اياه يتنفذ هلقيت 
+    //     // كود غير متزامن يعني مش بنفس المسار 
+    //     console.log("starting the async code")
+    //    // async code
+    //    setTimeout(()=>{
+    //         document.getElementById("title1").style.visibility= "visible"
+    //         resolve()
+    //         console.log("calling resolve")
+    //     },2000)
+        // isSuccess = true
+        // if(isSuccess){
+        //     console.log("calling resolve")
+        //     resolve()
+        // }else{
+        //     console.log("calling reject")
+        //     reject()
+        // }
+
+    //  })
+    //  console.log("after the promise creation and before then and catch")
+    //  // تعريف الاشياء ال رح يت تنفيذها مجرد م يكتمل بناء الوعد 
+    //  p.then(function(){
+    //     console.log("calling then")
+    //  }).catch(function(){
+    //     console.log("error")
+    //  })
+    //     console.log("after then and catch ")
+    //////////////////////////////////////////////////////
+    //بدنا نحول جحيم الكول باك الى بروميس 
+    new Promise((resolve,reject)=>{
+        // async code
+        setTimeout(()=>{
+            document.getElementById("title1").style.visibility= "visible"  
+            resolve()
+        },1000)
+    }).then(()=>{
+        return new Promise((resolve)=>{
+            setTimeout(()=>{
+            document.getElementById("title2").style.visibility= "visible"
+            resolve()
+        },1000)
+        })
+        
+    }).then(()=>{
+        return new Promise((resolve)=>{
+            setTimeout(()=>{
+            document.getElementById("title3").style.visibility= "visible"
+            resolve()
+        },1000)
+        })
+    }).then(()=>{
+        setTimeout(()=>{
+            document.getElementById("title4").style.visibility= "visible" 
+        },1000)
+    })
+</script>
+</html>
